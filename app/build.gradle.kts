@@ -6,6 +6,8 @@ plugins {
 }
 
 kotlin {
+    jvmToolchain(17)
+
     jvm()
     androidTarget()
 
@@ -17,6 +19,11 @@ kotlin {
         implementation(compose.foundation)
         implementation(compose.material3)
         implementation(compose.runtime)
+    }
+
+    sourceSets.androidMain.dependencies {
+        implementation("androidx.activity:activity-compose:1.9.0")
+        implementation("androidx.appcompat:appcompat:1.7.0")
     }
 }
 
