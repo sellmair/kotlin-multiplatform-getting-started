@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+
 plugins {
     kotlin("multiplatform")
     kotlin("plugin.compose")
@@ -27,6 +29,7 @@ kotlin {
     }
 }
 
+/* Android Configuration */
 android {
     compileSdk = 34
     namespace = "io.sellmair.kmp.getting.started"
@@ -34,5 +37,13 @@ android {
     defaultConfig {
         minSdk = 29
         applicationId = "io.sellmair.kmp.getting.started"
+    }
+}
+
+/* iOS Configuration */
+kotlin.targets.withType<KotlinNativeTarget>().configureEach {
+    binaries.framework {
+        baseName = "KmpApp"
+        isStatic = true
     }
 }
