@@ -27,6 +27,10 @@ kotlin {
         implementation("androidx.activity:activity-compose:1.9.0")
         implementation("androidx.appcompat:appcompat:1.7.0")
     }
+
+    sourceSets.jvmMain.dependencies {
+        implementation(compose.desktop.currentOs)
+    }
 }
 
 /* Android Configuration */
