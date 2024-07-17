@@ -12,6 +12,12 @@ kotlin {
     iosX64()
     iosArm64()
     iosSimulatorArm64()
+
+    sourceSets.commonMain.dependencies {
+        implementation(compose.foundation)
+        implementation(compose.material3)
+        implementation(compose.runtime)
+    }
 }
 
 android {
