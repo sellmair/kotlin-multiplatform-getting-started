@@ -74,6 +74,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0DA84922C484E2100ADCD3F /* Build configuration list for PBXNativeTarget "kmpSample" */;
 			buildPhases = (
+				B0DA84952C484E8300ADCD3F /* Compile Kotlin */,
 				B0DA84802C484E1F00ADCD3F /* Sources */,
 				B0DA84812C484E1F00ADCD3F /* Frameworks */,
 				B0DA84822C484E1F00ADCD3F /* Resources */,
@@ -131,6 +132,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B0DA84952C484E8300ADCD3F /* Compile Kotlin */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Kotlin";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd \"$SRCROOT/../../../\"\npwd\n./gradlew :app:embedAndSignAppleFrameworkForXcode\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B0DA84802C484E1F00ADCD3F /* Sources */ = {
@@ -272,6 +294,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"kmpSample/Preview Content\"";
+				DEVELOPMENT_TEAM = R58Q77NDGL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"kmpSample/Preview Content\"";
+				DEVELOPMENT_TEAM = R58Q77NDGL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
